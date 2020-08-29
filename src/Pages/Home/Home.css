@@ -47,9 +47,12 @@
   .home .showcaseTop {
     padding-left: 40px;
   }
+}
+
+@media (max-width: 530px) {
   .home .curveBg img {
     height: 200px;
-   margin-top: -100px;
-   margin-bottom: 100px;
+    margin-top: -100px;
+    margin-bottom: 100px;
   }
 }

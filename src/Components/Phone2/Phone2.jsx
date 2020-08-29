@@ -26,7 +26,7 @@ const Phone2 = () => {
   const classes = useStyles();
   return (
     <section className="Phone2">
-      <Grid container justify="space-between" alignItems="center">
+      <Grid container justify="space-evenly" alignItems="center">
         <Grid item xs="5" container justify="flex-start" className="desktopImg">
           <img src={phoneImg} alt="" />
         </Grid>

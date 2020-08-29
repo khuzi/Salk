@@ -39,6 +39,7 @@
 @media (max-width: 735px) {
   .Phone2 .desktopImg img {
     width: 100%;
+    margin: 0;
   }
 }
 

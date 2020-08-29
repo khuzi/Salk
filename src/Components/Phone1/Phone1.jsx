@@ -25,7 +25,7 @@ const Phone1 = () => {
   const classes = useStyles();
   return (
     <section className="Phone1">
-      <Grid container justify="space-between" alignItems="center">
+      <Grid container justify="space-evenly" alignItems="center">
         <Grid item sm="5">
           <Grid item>
             <Typography className={classes.mainHeading}>
