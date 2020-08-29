@@ -1,3 +1,6 @@
+.footer {
+    margin: 7rem 0;
+}
 .footer .logoWarper {
     display: flex;
     align-items: center;

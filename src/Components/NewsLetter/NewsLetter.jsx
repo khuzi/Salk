@@ -26,11 +26,11 @@ const NewsLetter = () => {
           <Typography className="text2">
             Get health tips delivered right on your phone{" "}
           </Typography>
-          <Grid item container>
-            <Grid item xs="8">
+          <Grid item container justify="center">
+            <Grid item sm="12" md="8">
               <input type="text" placeholder="Your Phone Number"/>
             </Grid>
-            <Grid item xs="4">
+            <Grid item sm="12" md="4">
               <Button className="btn">Get Started</Button>
             </Grid>
           </Grid>

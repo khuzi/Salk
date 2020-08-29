@@ -26,15 +26,18 @@ const Phone2 = () => {
   const classes = useStyles();
   return (
     <section className="Phone2">
-      <Grid container justify="space-evenly" alignItems="center">
-        <Grid item xs="5" container justify="flex-start">
+      <Grid container justify="space-between" alignItems="center">
+        <Grid item xs="5" container justify="flex-start" className="desktopImg">
           <img src={phoneImg} alt="" />
         </Grid>
-        <Grid item xs="5" md="5">
+        <Grid item sm="5">
           <Grid item>
             <Typography className={classes.mainHeading}>
               Product Managers
             </Typography>
+          </Grid>
+          <Grid item xs="12" container justify="center" className="mobileImg">
+            <img src={phoneImg} alt="" />
           </Grid>
           <Grid item>
             <Typography className={classes.text}>
@@ -45,7 +48,7 @@ const Phone2 = () => {
           </Grid>
           <Grid item>
             <div className="innerBox">
-            <Checkbox className="checkBox" checked/>
+              <Checkbox className="checkBox" checked />
               <Typography className={classes.text}>
                 Never worry about overpaying for your energy again.
               </Typography>
@@ -54,7 +57,7 @@ const Phone2 = () => {
 
           <Grid item>
             <div className="innerBox">
-            <Checkbox className="checkBox" checked/>
+              <Checkbox className="checkBox" checked />
               <Typography className={classes.text}>
                 We will only switch you to energy companies that we trust and
                 will treat you right
@@ -64,7 +67,7 @@ const Phone2 = () => {
 
           <Grid item>
             <div className="innerBox">
-              <Checkbox className="checkBox" checked/>
+              <Checkbox className="checkBox" checked />
               <Typography className={classes.text}>
                 We track the markets daily and know where the savings are.
               </Typography>

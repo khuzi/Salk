@@ -1,17 +1,6 @@
-.Phone2 {
-  margin: 4rem;
-}
-.Phone2 img {
-  width: 60%;
-}
-
 .Phone2 .innerBox {
   display: flex;
   align-items: center;
-}
-.Phone2 .innerBox > *:first-child {
-  margin-top: 1.9rem;
-  margin-right: 1.5rem;
 }
 
 .Phone2 .innerBox .checkBox {
@@ -29,4 +18,43 @@
   height: 30px;
 }
 
+.Phone2 {
+  margin-right: 4rem;
+}
+.Phone2 .desktopImg img {
+  width: 60%;
+  margin-left: 4rem;
+}
 
+.Phone2 .mobileImg {
+  display: none;
+}
+
+.Phone2 .mobileImg img {
+  width: 60%;
+}
+
+@media (max-width: 935px) {
+  .Phone2 .desktopImg img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 735px) {
+  .Phone2 .desktopImg img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .Phone2 {
+    margin-right: 1rem;
+    text-align: center;
+  }
+  .Phone2 .desktopImg {
+    display: none;
+  }
+  .Phone2 .mobileImg {
+    display: block;
+  }
+}

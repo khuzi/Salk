@@ -25,12 +25,15 @@ const Phone1 = () => {
   const classes = useStyles();
   return (
     <section className="Phone1">
-      <Grid container justify="space-evenly" alignItems="center">
-        <Grid item xs="5" md="5">
+      <Grid container justify="space-between" alignItems="center">
+        <Grid item sm="5">
           <Grid item>
             <Typography className={classes.mainHeading}>
               Design Professionals
             </Typography>
+          </Grid>
+          <Grid item xs="12" container justify="center" className="mobileImg">
+            <img src={phoneImg} alt="" />
           </Grid>
           <Grid item>
             <Typography className={classes.subHeading}>
@@ -63,7 +66,7 @@ const Phone1 = () => {
           </Grid>
         </Grid>
 
-        <Grid item xs="5" container justify="flex-end">
+        <Grid item xs="5" container justify="flex-end" className="desktopImg">
           <img src={phoneImg} alt="" />
         </Grid>
       </Grid>

@@ -8,9 +8,8 @@ import discoverImg from "../../assets/images/Discover.png";
 import monitorImg from "../../assets/images/Monitor.png";
 import Phone1 from "../../Components/Phone1/Phone1";
 import Phone2 from "../../Components/Phone2/Phone2";
-import NewsLetter from '../../Components/NewsLetter/NewsLetter';
-import "./Home.css";
 
+import "./Home.css";
 
 const useStyles = makeStyles((theme) => ({
   heading1: {
@@ -87,13 +86,13 @@ const Home = () => {
     <section className="home">
       <Grid container className="showcaseTop">
         <Grid item xs="6" container direction="column" justify="center">
-          <Typography className={classes.heading1}>
+          <Typography data-aos="fade-up" className={classes.heading1}>
             Because You Matter
           </Typography>
-          <Typography className={classes.heading2}>
+          <Typography data-aos="fade-up" className={classes.heading2}>
             The best interface to personal health
           </Typography>
-          <div className={classes.btnWarper}>
+          <div data-aos="fade-up" className={classes.btnWarper}>
             <Button className={classes.btn}>Notify me</Button>
           </div>
         </Grid>
@@ -215,11 +214,21 @@ const Home = () => {
           </Grid>
         </Grid>
       </div>
-      <Phone1 />
-      <Phone2 />
-      <Phone1 />
-      <Phone2 />
-      <NewsLetter />
+      <div data-aos="fade-up">
+        <Phone1 />
+      </div>
+      <br/><br/>
+      <div data-aos="fade-up">
+        <Phone2 />
+      </div>
+      <br/><br/>
+      <div data-aos="fade-up">
+        <Phone1 />
+      </div>
+      <br/><br/>
+      <div data-aos="fade-up">
+        <Phone2 />
+      </div>
     </section>
   );
 };

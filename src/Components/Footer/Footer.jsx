@@ -2,7 +2,7 @@ import React from "react";
 
 import { Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
-import logo from '../../assets/images/footer-logo.png'
+import logo from "../../assets/images/footer-logo.png";
 import "./Footer.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -37,15 +37,14 @@ const Footer = () => {
       <div className={classes.root}>
         <Grid container>
           <Grid item xs="6" md="4" lg="2">
-            <br />
+
             <Grid>
               <div className="logoWarper">
-                <img src={logo} alt="" style={{marginRight: '1rem'}}/>
+                <img src={logo} alt="" style={{ marginRight: "1rem" }} />
                 <Typography className={classes.logo}>Salk</Typography>
               </div>
-              <br />
               <Typography style={{ fontSize: "10px" }}>
-                2020 Salk Technologies inc.
+                &copy; {new Date().getFullYear()}, 2020 Salk Technologies inc.
               </Typography>
             </Grid>
           </Grid>

@@ -1,6 +1,40 @@
 .Phone1 {
-  margin: 4rem;
+  margin-left: 4rem;
 }
-.Phone1 img {
+.Phone1 .desktopImg img {
   width: 60%;
+  margin-right: 4rem;
+}
+
+.Phone1 .mobileImg {
+  display: none;
+}
+
+.Phone1 .mobileImg img {
+  width: 60%;
+}
+
+@media (max-width: 935px) {
+  .Phone1 .desktopImg img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 735px) {
+  .Phone1 .desktopImg img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .Phone1 {
+    margin-left: 1rem;
+    text-align: center;
+  }
+  .Phone1 .desktopImg {
+    display: none;
+  }
+  .Phone1 .mobileImg {
+    display: block;
+  }
 }
