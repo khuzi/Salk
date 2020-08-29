@@ -48,7 +48,7 @@ const Phone2 = () => {
           </Grid>
           <Grid item>
             <div className="innerBox">
-              <Checkbox className="checkBox" checked />
+              {/* <Checkbox className="checkBox" checked /> */}
               <Typography className={classes.text}>
                 Never worry about overpaying for your energy again.
               </Typography>
@@ -57,7 +57,7 @@ const Phone2 = () => {
 
           <Grid item>
             <div className="innerBox">
-              <Checkbox className="checkBox" checked />
+              {/* <Checkbox className="checkBox" checked /> */}
               <Typography className={classes.text}>
                 We will only switch you to energy companies that we trust and
                 will treat you right
@@ -67,7 +67,7 @@ const Phone2 = () => {
 
           <Grid item>
             <div className="innerBox">
-              <Checkbox className="checkBox" checked />
+              {/* <Checkbox className="checkBox" checked /> */}
               <Typography className={classes.text}>
                 We track the markets daily and know where the savings are.
               </Typography>

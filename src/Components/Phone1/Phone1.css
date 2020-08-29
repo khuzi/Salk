@@ -28,7 +28,8 @@
 
 @media (max-width: 600px) {
   .Phone1 {
-    margin-left: 1rem;
+    margin-left: 0rem;
+    margin: 0 1rem;
     text-align: center;
   }
   .Phone1 .desktopImg {
