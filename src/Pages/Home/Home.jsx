@@ -6,9 +6,9 @@ import improveImg from "../../assets/images/Improve.png";
 import consultImg from "../../assets/images/Consult.png";
 import discoverImg from "../../assets/images/Discover.png";
 import monitorImg from "../../assets/images/Monitor.png";
+import curveImg from "../../assets/images/curveBG.png";
 import Phone1 from "../../Components/Phone1/Phone1";
 import Phone2 from "../../Components/Phone2/Phone2";
-
 import "./Home.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -63,6 +63,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main,
     fontSize: "35px",
     fontWeight: "bold",
+    marginBottom: "72px",
     [theme.breakpoints.down("md")]: {
       fontSize: "30px",
     },
@@ -120,12 +121,10 @@ const Home = () => {
               <img src={improveImg} alt="" />
             </Grid>
             <Grid>
-              <Typography style={{ fontSize: "22px", marginBottom: "0.5rem" }}>
-                Improve
-              </Typography>
+              <Typography className="boxHeading">Improve</Typography>
             </Grid>
             <Grid item>
-              <Typography style={{ fontSize: "16px" }}>
+              <Typography className="boxText">
                 Take our short questionnaire to get recommended tests for a more
                 personalized experience - whether you want to improve
                 nutritional goals or heart health, our goal is to guide you
@@ -147,12 +146,10 @@ const Home = () => {
               <img src={monitorImg} alt="" />
             </Grid>
             <Grid>
-              <Typography style={{ fontSize: "22px", marginBottom: "0.5rem" }}>
-                Monitor
-              </Typography>
+              <Typography className="boxHeading">Monitor</Typography>
             </Grid>
             <Grid item>
-              <Typography style={{ fontSize: "16px" }}>
+              <Typography className="boxText">
                 Accurate, physician reviewed results from CLIA-Certified labs
                 that allow you to better understand your health. Our dedicated
                 clinical support team will guide you through this process from
@@ -174,12 +171,10 @@ const Home = () => {
               <img src={consultImg} alt="" />
             </Grid>
             <Grid>
-              <Typography style={{ fontSize: "22px", marginBottom: "0.5rem" }}>
-                Consult
-              </Typography>
+              <Typography className="boxHeading">Consult</Typography>
             </Grid>
             <Grid item>
-              <Typography style={{ fontSize: "16px" }}>
+              <Typography className="boxText">
                 Have the option to speak to a licensed medical professional -
                 whether you want meal tips from a dietitian or speak to a mental
                 health specialist. Our dedicated staff will be there for you
@@ -200,11 +195,11 @@ const Home = () => {
             <Grid item>
               <img src={discoverImg} alt="" />
             </Grid>
-            <Grid>
-              <Typography style={{ fontSize: "22px" }}>Discover</Typography>
+            <Grid item>
+              <Typography className="boxHeading">Discover</Typography>
             </Grid>
             <Grid item>
-              <Typography style={{ fontSize: "16px", marginBottom: "0.5rem" }}>
+              <Typography className="boxText">
                 Take our short questionnaire to get recommended tests for a more
                 personalized experience - whether you want to improve
                 nutritional goals or heart health, our goal is to guide you
@@ -213,19 +208,25 @@ const Home = () => {
             </Grid>
           </Grid>
         </Grid>
+        <div className="curveBg">
+          <img src={curveImg} alt="" />
+        </div>
       </div>
       <div data-aos="fade-up">
         <Phone1 />
       </div>
-      <br/><br/>
+      <br />
+      <br />
       <div data-aos="fade-up">
         <Phone2 />
       </div>
-      <br/><br/>
+      <br />
+      <br />
       <div data-aos="fade-up">
         <Phone1 />
       </div>
-      <br/><br/>
+      <br />
+      <br />
       <div data-aos="fade-up">
         <Phone2 />
       </div>

@@ -1,14 +1,14 @@
 .footer {
-    margin: 7rem 0;
+  margin-top: 7rem;
+  border-top: 2px solid #eee;
 }
 .footer .logoWarper {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .footer .logoWarper i {
-    font-size: 3rem;
-    margin-right: 1rem;
-    color: #66BDDD;
+  font-size: 3rem;
+  margin-right: 1rem;
+  color: #66bddd;
 }
-
