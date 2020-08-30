@@ -23,12 +23,13 @@ const useStyles = makeStyles((theme) => ({
     margin: "1rem 0",
   },
   menuButton: {
-    marginLeft: theme.spacing(2),
+    marginRight: theme.spacing(2),
     color: "#000",
     display: "none",
     cursor: "pointer",
     [theme.breakpoints.down("xs")]: {
       display: "block",
+
     },
   },
   logo: {
