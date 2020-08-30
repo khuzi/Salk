@@ -1,19 +1,3 @@
-
-.Phone2 .innerBox .checkBox {
-  color: #ff9900;
-  border-radius: 14px;
-  cursor: pointer;
-}
-
-.Phone2 .innerBox .checkBox::after {
-  position: absolute;
-  content: "";
-  border: 1px solid #ff9900;
-  border-radius: 14px;
-  width: 30px;
-  height: 30px;
-}
-
 .Phone2 {
   margin-right: 4rem;
 }
@@ -30,16 +14,37 @@
   width: 60%;
 }
 
+.Phone2 ul {
+  margin-top: 2rem;
+}
+
+.Phone2 ul li {
+  display: flex;
+  align-items: center;
+  max-width: 80%;
+  margin-top: 2rem;
+}
+.Phone2 .gifTick {
+  width: 20%;
+  margin-right: 1rem;
+}
+
 @media (max-width: 935px) {
   .Phone2 .desktopImg img {
     width: 80%;
+  }
+  .Phone2 .gifTick {
+    width: 30%;
   }
 }
 
 @media (max-width: 735px) {
   .Phone2 .desktopImg img {
-    width: 100%;
+    width: 110%;
     margin: 0;
+  }
+  .Phone2 ul li {
+    max-width: 100%;
   }
 }
 
@@ -54,5 +59,14 @@
   }
   .Phone2 .mobileImg {
     display: block;
+  }
+  .Phone2 ul li {
+    max-width: 100%;
+    margin-right: 1rem;
+  }
+  .Phone2 .gifTick {
+    width: 20%;
+    margin: 0;
+    margin-bottom: 1rem;
   }
 }

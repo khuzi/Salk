@@ -2,6 +2,7 @@ import React from "react";
 
 import { Grid, Typography, makeStyles, Checkbox } from "@material-ui/core";
 import phoneImg from "../../assets/images/iphone.png";
+import tickGif from "../../assets/images/ezgif.com-gif-maker.gif";
 import "./Phone2.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -47,31 +48,29 @@ const Phone2 = () => {
             </Typography>
           </Grid>
           <Grid item>
-            <div className="innerBox">
-              {/* <Checkbox className="checkBox" checked /> */}
-              <Typography className={classes.text}>
-                Never worry about overpaying for your energy again.
-              </Typography>
-            </div>
-          </Grid>
+            <ul>
+              <li>
+                <img src={tickGif} alt="" className="gifTick" />
+                <Typography style={{ fontSize: "16px", color: "#544837" }}>
+                  Never worry about overpaying for your energy again.
+                </Typography>
+              </li>
 
-          <Grid item>
-            <div className="innerBox">
-              {/* <Checkbox className="checkBox" checked /> */}
-              <Typography className={classes.text}>
-                We will only switch you to energy companies that we trust and
-                will treat you right
-              </Typography>
-            </div>
-          </Grid>
+              <li>
+                <img src={tickGif} alt="" className="gifTick" />
+                <Typography style={{ fontSize: "16px", color: "#544837" }}>
+                  We will only switch you to energy companies that we trust and
+                  will treat you right
+                </Typography>
+              </li>
 
-          <Grid item>
-            <div className="innerBox">
-              {/* <Checkbox className="checkBox" checked /> */}
-              <Typography className={classes.text}>
-                We track the markets daily and know where the savings are.
-              </Typography>
-            </div>
+              <li>
+                <img src={tickGif} alt="" className="gifTick" />
+                <Typography style={{ fontSize: "16px", color: "#544837" }}>
+                  We track the markets daily and know where the savings are.
+                </Typography>
+              </li>
+            </ul>
           </Grid>
         </Grid>
       </Grid>
