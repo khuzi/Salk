@@ -3,6 +3,7 @@ import AOS from "aos";
 import { Switch, Route } from "react-router-dom";
 import { MuiThemeProvider, StylesProvider } from "@material-ui/core";
 import { theme } from "./Theme";
+import Loader from "./Components/UI/Loader/Laoder";
 import "aos/dist/aos.css";
 
 const Layout = lazy(() => import("./Hoc/Layout/Layout"));
@@ -40,14 +41,14 @@ function App() {
         <Route
           path="/"
           render={() => (
-            <Suspense fallback={<div>Loading...!</div>}>
+            <Suspense fallback={<Loader />}>
               <Layout>
                 <Switch>
                   <Route
                     exact
                     path="/"
                     render={() => (
-                      <Suspense fallback={<div>Loading...!</div>}>
+                      <Suspense fallback={<Loader />}>
                         <Home />
                       </Suspense>
                     )}
@@ -56,7 +57,7 @@ function App() {
                     exact
                     path="/about"
                     render={() => (
-                      <Suspense fallback={<div>Loading...!</div>}>
+                      <Suspense fallback={<Loader />}>
                         <About />
                       </Suspense>
                     )}
@@ -65,7 +66,7 @@ function App() {
                     exact
                     path="/contact"
                     render={() => (
-                      <Suspense fallback={<div>Loading...!</div>}>
+                      <Suspense fallback={<Loader />}>
                         <Contact />
                       </Suspense>
                     )}

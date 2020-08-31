@@ -26,7 +26,8 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "40px",
     },
     [theme.breakpoints.down("xs")]: {
-      fontSize: "25px",
+      fontSize: "30px",
+      lineHeight: "1",
     },
   },
   heading2: {
@@ -38,6 +39,8 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("xs")]: {
       fontSize: "15px",
+      lineHeight: "1.2",
+      marginBottom: 0,
     },
   },
   btnWarper: {
@@ -54,9 +57,12 @@ const useStyles = makeStyles((theme) => ({
       width: "120px",
     },
     [theme.breakpoints.down("sm")]: {
-      width: "80px",
-      height: "30px",
+      width: "100px",
+      height: "40px",
       fontSize: "12px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      marginTop: "20px",
     },
   },
   heading3: {
@@ -218,7 +224,7 @@ const Home = () => {
       <br />
       <br />
       <div data-aos="fade-up">
-        <Phone2 />
+        <Phone2 height={window.innerWidth > 500 ? 2200 : 3100} />
       </div>
       <br />
       <br />
@@ -228,14 +234,10 @@ const Home = () => {
       <br />
       <br />
       <div data-aos="fade-up">
-        <Phone2 />
+        <Phone2 height={window.innerWidth > 500 ? 3100 : 4300} />
       </div>
     </section>
   );
 };
 
 export default Home;
-
-/**
- *
- */
