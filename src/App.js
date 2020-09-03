@@ -4,7 +4,7 @@ import { Switch, Route } from "react-router-dom";
 import { MuiThemeProvider, StylesProvider } from "@material-ui/core";
 import { theme } from "./Theme";
 import Loader from "./Components/UI/Loader/Laoder";
-// import "aos/dist/aos.css";
+import "aos/dist/aos.css";
 
 const Layout = lazy(() => import("./Hoc/Layout/Layout"));
 const Home = lazy(() => import("./Pages/Home/Home"));
@@ -21,12 +21,12 @@ function App() {
       animatedClassName: "aos-animate", // class applied on animation
       useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
       disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-      throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+      debounceDelay: 100, // the delay on debounce used while resizing window (advanced)
+      throttleDelay: 199, // the delay on throttle used while scrolling the page (advanced)
 
       // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
       offset: 120, // offset (in px) from the original trigger point
-      delay: 800, // values from 0 to 3000, with step 50ms
+      delay: 700, // values from 0 to 3000, with step 50ms
       duration: 1500, // values from 0 to 3000, with step 50ms
       easing: "ease", // default easing for AOS animations
       once: false, // whether animation should happen only once - while scrolling down

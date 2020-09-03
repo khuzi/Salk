@@ -127,6 +127,8 @@ const Home = () => {
             container
             direction="column"
             className={classes.box}
+            data-aos="fade-down"
+            data-aos-duration="500"
           >
             <Grid item>
               <img src={improveImg} alt="" />
@@ -152,6 +154,8 @@ const Home = () => {
             container
             direction="column"
             className={classes.box}
+            data-aos="fade-down"
+            data-aos-duration="500"
           >
             <Grid item>
               <img src={monitorImg} alt="" />
@@ -177,6 +181,8 @@ const Home = () => {
             container
             direction="column"
             className={classes.box}
+            data-aos="fade-down"
+            data-aos-duration="500"
           >
             <Grid item>
               <img src={consultImg} alt="" />
@@ -202,6 +208,8 @@ const Home = () => {
             container
             direction="column"
             className={classes.box}
+            data-aos="fade-down"
+            data-aos-duration="500"
           >
             <Grid item>
               <img src={discoverImg} alt="" />
@@ -243,7 +251,7 @@ const Home = () => {
         <Phone1
           height={window.innerWidth > 500 ? 3000 : 4100}
           heading={
-            <p style={{ lineHeight: "1.2" }}>
+            <p style={{ lineHeight: "1.3" }}>
               Understand your diet better.
               <br />
               Explore different plans.
@@ -258,7 +266,7 @@ const Home = () => {
       <br />
       <br />
       <div data-aos="fade-up">
-        <Phone1
+        <Phone2
           height={window.innerWidth > 500 ? 4000 : 4900}
           {...phone3Data}
         />
@@ -266,7 +274,7 @@ const Home = () => {
       <br />
       <br />
       <div data-aos="fade-up">
-        <Phone2
+        <Phone1
           height={window.innerWidth > 500 ? 4600 : 5900}
           {...phone4Data}
         />

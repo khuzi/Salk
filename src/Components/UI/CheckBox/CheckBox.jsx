@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import Checkbox from "@material-ui/core/Checkbox";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     "&:hover": {
       backgroundColor: "transparent",
@@ -28,6 +28,8 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "#FF9900",
     backgroundImage:
       "linear-gradient(180deg,hsla(0,0%,100%,.1),hsla(0,0%,100%,0))",
+    transition: "all 1s ease-in-out",
+    transform: "rotate(360deg)",
     "&:before": {
       margin: "2px auto",
       display: "block",
