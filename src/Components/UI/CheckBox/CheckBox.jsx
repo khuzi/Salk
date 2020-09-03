@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import Checkbox from "@material-ui/core/Checkbox";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
     "&:hover": {
       backgroundColor: "transparent",
@@ -40,7 +40,7 @@ const useStyles = makeStyles({
       content: '""',
     },
   },
-});
+}));
 
 export default function CustomizedCheckbox(props) {
   const classes = useStyles();

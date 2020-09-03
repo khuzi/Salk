@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import { Grid, Typography, makeStyles } from "@material-ui/core";
 import phoneImg from "../../assets/images/iphone.png";
+import CheckBox from "../UI/CheckBox/CheckBox";
 import "./Phone1.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -9,63 +10,111 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "36px",
     color: theme.palette.heading.hd2,
     fontWeight: "bold",
-  },
-  subHeading: {
-    fontSize: "16px",
-    color: theme.palette.heading.hd2,
-    fontWeight: "bold",
-    margin: "1rem 0",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "30px",
+    },
   },
   text: {
     color: "#544837",
+    marginTop: "2rem",
   },
 }));
 
-const Phone1 = () => {
+const Phone2 = (props) => {
   const classes = useStyles();
+
+  const [height, setHeight] = useState(0);
+  const [t1, setT1] = useState(false);
+  const [t2, setT2] = useState(false);
+  const [t3, setT3] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setHeight(window.scrollY);
+    });
+    // console.log(height);
+  });
+
+  useEffect(() => {
+    let timer = null;
+    if (height > props.height) {
+      timer = setTimeout(() => {
+        setT1(true);
+      }, 200);
+    } else {
+      setT1(false);
+    }
+    return () => clearTimeout(timer);
+  }, [height, props.height]);
+
+  useEffect(() => {
+    let timer = null;
+    if (height > props.height) {
+      timer = setTimeout(() => {
+        setT2(true);
+      }, 400);
+    } else {
+      setT2(false);
+    }
+    return () => clearTimeout(timer);
+  }, [height, props.height]);
+
+  useEffect(() => {
+    let timer = null;
+    if (height > props.height) {
+      timer = setTimeout(() => {
+        setT3(true);
+      }, 600);
+    } else {
+      setT3(false);
+    }
+    return () => clearTimeout(timer);
+  }, [height, props.height]);
+
   return (
     <section className="Phone1">
       <Grid container justify="space-evenly" alignItems="center">
         <Grid item sm="5">
           <Grid item>
             <Typography className={classes.mainHeading}>
-              Design Professionals
+              {props.heading}
             </Typography>
           </Grid>
           <Grid item xs="12" container justify="center" className="mobileImg">
             <img src={phoneImg} alt="" />
           </Grid>
           <Grid item>
-            <Typography className={classes.subHeading}>
-              Accessory makers
-            </Typography>
-            <Typography className={classes.text}>
-              While most people enjoy casino gambling, sports betting, lottery
-              and bingo playing for the fun
-            </Typography>
-          </Grid>
-
-          <Grid item>
-            <Typography className={classes.subHeading}>
-              Alterationists
-            </Typography>
-            <Typography className={classes.text}>
-              If you are looking for a new way to promote your business that
-              won’t cost you more money,
-            </Typography>
-          </Grid>
-
-          <Grid item>
-            <Typography className={classes.subHeading}>
-              Custom Design designers
-            </Typography>
-            <Typography className={classes.text}>
-              If you are looking for a new way to promote your business <br />{" "}
-              that won’t cost you more money,
-            </Typography>
+            <Typography className="subHeading">{props.title1}</Typography>
+            <ul>
+              <li>
+                <CheckBox checked={t1} />
+                <Typography className="liText" style={{ color: "#544837" }}>
+                  {props.text1}
+                </Typography>
+              </li>
+            </ul>
+            <Typography className="subHeading">{props.title2}</Typography>
+            <ul>
+              <li>
+                <CheckBox checked={t2} />
+                <Typography className="liText" style={{ color: "#544837" }}>
+                  {props.text2}
+                </Typography>
+              </li>
+            </ul>
+            <Typography className="subHeading">{props.title3}</Typography>
+            {props.text3 && (
+              <ul>
+                <li>
+                  <CheckBox checked={t3} />
+                  <Typography className="liText" style={{ color: "#544837" }}>
+                    {props.text3}
+                  </Typography>
+                </li>
+              </ul>
+            )}
           </Grid>
         </Grid>
-
         <Grid item xs="5" container justify="flex-end" className="desktopImg">
           <img src={phoneImg} alt="" />
         </Grid>
@@ -74,4 +123,4 @@ const Phone1 = () => {
   );
 };
 
-export default Phone1;
+export default Phone2;

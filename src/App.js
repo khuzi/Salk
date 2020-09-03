@@ -4,7 +4,7 @@ import { Switch, Route } from "react-router-dom";
 import { MuiThemeProvider, StylesProvider } from "@material-ui/core";
 import { theme } from "./Theme";
 import Loader from "./Components/UI/Loader/Laoder";
-import "aos/dist/aos.css";
+// import "aos/dist/aos.css";
 
 const Layout = lazy(() => import("./Hoc/Layout/Layout"));
 const Home = lazy(() => import("./Pages/Home/Home"));

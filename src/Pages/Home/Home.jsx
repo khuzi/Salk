@@ -1,5 +1,10 @@
 import React from "react";
-
+import {
+  phone1 as phone1Data,
+  phone2 as phone2Data,
+  phone3 as phone3Data,
+  phone4 as phone4Data,
+} from "../../data";
 import { Grid, Typography, Button, makeStyles } from "@material-ui/core";
 import showcaseImg from "../../assets/images/Top1.png";
 import improveImg from "../../assets/images/Improve.png";
@@ -219,22 +224,52 @@ const Home = () => {
         </div>
       </div>
       <div data-aos="fade-up">
-        <Phone1 />
+        <Phone1
+          height={window.innerWidth > 500 ? 1000 : 2100}
+          {...phone1Data}
+        />
       </div>
       <br />
       <br />
       <div data-aos="fade-up">
-        <Phone2 height={window.innerWidth > 500 ? 2200 : 3100} />
+        <Phone2
+          height={window.innerWidth > 500 ? 2200 : 3100}
+          {...phone2Data}
+        />
       </div>
       <br />
       <br />
       <div data-aos="fade-up">
-        <Phone1 />
+        <Phone1
+          height={window.innerWidth > 500 ? 3000 : 4100}
+          heading={
+            <p style={{ lineHeight: "1.2" }}>
+              Understand your diet better.
+              <br />
+              Explore different plans.
+            </p>
+          }
+          title1="Diet plans that fit your goal"
+          text1="Offering catered diet plans specific to your needs."
+          title2="Personalized plans built by licensed dietitians"
+          text2="Access your diet plan wherever you are at no cost"
+        />
       </div>
       <br />
       <br />
       <div data-aos="fade-up">
-        <Phone2 height={window.innerWidth > 500 ? 3100 : 4300} />
+        <Phone1
+          height={window.innerWidth > 500 ? 4000 : 4900}
+          {...phone3Data}
+        />
+      </div>
+      <br />
+      <br />
+      <div data-aos="fade-up">
+        <Phone2
+          height={window.innerWidth > 500 ? 4600 : 5900}
+          {...phone4Data}
+        />
       </div>
     </section>
   );

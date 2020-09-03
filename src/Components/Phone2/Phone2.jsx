@@ -10,12 +10,17 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "36px",
     color: theme.palette.heading.hd2,
     fontWeight: "bold",
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '30px'
+    }
   },
   subHeading: {
-    fontSize: "16px",
+    fontSize: "18px",
     color: theme.palette.heading.hd2,
     fontWeight: "bold",
-    margin: "1rem 0",
+    marginTop: "1rem",
+    marginLeft: "4.2rem",
+    marginBottom: "-1.5rem",
   },
   text: {
     color: "#544837",
@@ -35,7 +40,6 @@ const Phone2 = (props) => {
     window.addEventListener("scroll", () => {
       setHeight(window.scrollY);
     });
-    // console.log(height);
   });
 
   useEffect(() => {
@@ -55,7 +59,7 @@ const Phone2 = (props) => {
     if (height > props.height) {
       timer = setTimeout(() => {
         setT2(true);
-      }, 300);
+      }, 400);
     } else {
       setT2(false);
     }
@@ -67,7 +71,7 @@ const Phone2 = (props) => {
     if (height > props.height) {
       timer = setTimeout(() => {
         setT3(true);
-      }, 400);
+      }, 600);
     } else {
       setT3(false);
     }
@@ -83,40 +87,37 @@ const Phone2 = (props) => {
         <Grid item sm="5">
           <Grid item>
             <Typography className={classes.mainHeading}>
-              Product Managers
+              {props.heading}
             </Typography>
           </Grid>
           <Grid item xs="12" container justify="center" className="mobileImg">
             <img src={phoneImg} alt="" />
           </Grid>
           <Grid item>
-            <Typography className={classes.text}>
-              The My space page defines the individual, his or her
-              characteristics, traits, personal choices and the overall
-              personality of the person.
-            </Typography>
-          </Grid>
-          <Grid item>
+            <Typography className="subHeading">{props.title1}</Typography>
             <ul>
               <li>
                 <CheckBox checked={t1} />
-                <Typography style={{ fontSize: "16px", color: "#544837" }}>
-                  Never worry about overpaying for your energy again.
+                <Typography className="liText" style={{ color: "#544837" }}>
+                  {props.text1}
                 </Typography>
               </li>
-
+            </ul>
+            <Typography className="subHeading">{props.title2}</Typography>
+            <ul>
               <li>
                 <CheckBox checked={t2} />
-                <Typography style={{ fontSize: "16px", color: "#544837" }}>
-                  We will only switch you to energy companies that we trust and
-                  will treat you right
+                <Typography className="liText" style={{ color: "#544837" }}>
+                  {props.text2}
                 </Typography>
               </li>
-
+            </ul>
+            <Typography className="subHeading">{props.title3}</Typography>
+            <ul>
               <li>
                 <CheckBox checked={t3} />
-                <Typography style={{ fontSize: "16px", color: "#544837" }}>
-                  We track the markets daily and know where the savings are.
+                <Typography className="liText" style={{ color: "#544837" }}>
+                  {props.text3}
                 </Typography>
               </li>
             </ul>
