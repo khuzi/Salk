@@ -69,6 +69,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       marginTop: "20px",
     },
+    "&:hover": {
+      background: theme.palette.primary.main,
+      opacity: "0.9",
+    },
   },
   heading3: {
     color: theme.palette.primary.main,
@@ -279,6 +283,8 @@ const Home = () => {
           {...phone4Data}
         />
       </div>
+      <br />
+      <br />
     </section>
   );
 };

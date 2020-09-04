@@ -11,7 +11,8 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.heading.hd2,
     fontWeight: "bold",
     [theme.breakpoints.down("sm")]: {
-      fontSize: "30px",
+      fontSize: "25px",
+      marginLeft: "1rem",
     },
   },
   text: {

@@ -5,7 +5,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import NavItem from "./NavItem/NavItem";
 import Drawer from "./Darwer/Drawer";
-import logo from "../../assets/images/nav-logo.png";
+import logo from "../../assets/images/footer-logo.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -46,7 +46,7 @@ export default function Navbar() {
     <div className={classes.root}>
       <AppBar className={classes.appBar} position="static">
         <Toolbar>
-          <img className={classes.logo} src={logo} alt="" />
+          <img className={classes.logo} src={logo} style={{width: '2.2rem' , marginRight: '0.5rem'}} alt="" />
           <Typography className={classes.title}>Productly</Typography>
           <div className={classes.navItems}>
             <NavItem path="/" text="Home" />

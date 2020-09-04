@@ -9,7 +9,7 @@
   margin-top: 1rem;
   margin-left: 4.2rem;
   margin-bottom: -1.5rem;
-  max-width: 70%;
+  max-width: 100%;
 }
 
 .Phone1 .desktopImg img {
@@ -53,7 +53,6 @@
   .Phone1 {
     margin-right: 0rem;
     margin: 0 1rem;
-    text-align: center;
   }
   .Phone1 .desktopImg {
     display: none;
@@ -61,23 +60,25 @@
   .Phone1 .mobileImg {
     display: block;
   }
+  .Phone1 .mobileImg img {
+    display: block;
+    margin: auto;
+  }
   .Phone1 ul li {
     max-width: 100%;
-    margin-right: 3rem;
+    margin-left: auto;
+    margin-right: auto;
   }
   .Phone1 .subHeading {
     margin-bottom: -2.5rem;
-    /* line-height: 1.1; */
   }
   .Phone1 ul li .liText {
     max-width: 80%;
-    text-align: center;
-    /* line-height: 1.1; */
   }
 }
 
 @media (max-width: 513px) {
   .Phone1 ul li .liText {
-    padding-top: 1.5rem;
+    padding-top: 1rem;
   }
 }

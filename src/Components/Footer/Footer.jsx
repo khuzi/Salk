@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
   logo: {
     color: "#000",
     fontSize: "34px",
-    cursor: 'pointer'
+    cursor: "pointer",
   },
   heading: {
     color: theme.palette.primary.main,
@@ -24,9 +24,17 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "16px",
     marginTop: "1rem",
   },
+  col: {
+    [theme.breakpoints.down("sm")]: {
+      marginBottom: "2rem",
+    },
+  },
   col2: {
     [theme.breakpoints.down("sm")]: {
-      textAlign: "center",
+      paddingLeft: '2.5rem'
+    },
+    [theme.breakpoints.down("xs")]: {
+      paddingLeft: '0'
     },
   },
 }));
@@ -37,7 +45,7 @@ const Footer = () => {
     <section className="footer">
       <div className={classes.root}>
         <Grid container>
-          <Grid item xs="6" md="4" lg="2">
+          <Grid item xs="12" sm="4" lg="2" className={classes.col}>
             <Grid>
               <div className="logoWarper">
                 <img src={logo} alt="" style={{ marginRight: "1rem" }} />
@@ -45,12 +53,18 @@ const Footer = () => {
                   <Link to="/">Salk</Link>
                 </Typography>
               </div>
-              <Typography style={{ fontSize: "12px" , marginTop: '1rem'}}>
+              <Typography style={{ fontSize: "12px", marginTop: "1rem" }}>
                 &copy; {new Date().getFullYear()}, Salk Technologies inc.
               </Typography>
             </Grid>
           </Grid>
-          <Grid item xs="6" md="4" lg="2" className={classes.col2}>
+          <Grid
+            item
+            xs="12"
+            sm="4"
+            lg="2"
+            className={`${classes.col} ${classes.col2}`}
+          >
             <Typography className={classes.heading}>
               <Link to="/">Salk</Link>
             </Typography>
@@ -75,7 +89,7 @@ const Footer = () => {
               </li>
             </ul>
           </Grid>
-          <Grid item xs="6" md="4" lg="2">
+          <Grid item xs="12" sm="4" lg="2" className={classes.col}>
             <Typography className={classes.heading}>Find us on</Typography>
 
             <ul>

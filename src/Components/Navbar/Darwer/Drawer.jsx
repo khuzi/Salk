@@ -7,7 +7,7 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import NavItem from "../NavItem/NavItem";
 import MenuIcon from "@material-ui/icons/Menu";
-import logo from "../../../assets/images/nav-logo.png";
+import logo from "../../../assets/images/footer-logo.png";
 
 const useStyles = makeStyles((theme) => ({
   list: {
@@ -64,7 +64,7 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(false)}
     >
       <div className={classes.logo}>
-        <img src={logo} alt="" />
+        <img src={logo} alt="" style={{width: '2.5rem' , marginRight: '0.5rem'}}/>
         <Typography className={classes.title} align="center">
           Productly
         </Typography>
