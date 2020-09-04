@@ -5,6 +5,7 @@ import { MuiThemeProvider, StylesProvider } from "@material-ui/core";
 import { theme } from "./Theme";
 import Loader from "./Components/UI/Loader/Laoder";
 import "aos/dist/aos.css";
+import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
 
 const Layout = lazy(() => import("./Hoc/Layout/Layout"));
 const Home = lazy(() => import("./Pages/Home/Home"));
@@ -68,6 +69,15 @@ function App() {
                     render={() => (
                       <Suspense fallback={<Loader />}>
                         <Contact />
+                      </Suspense>
+                    )}
+                  />
+                  <Route
+                    exact
+                    path="/privacy-policy"
+                    render={() => (
+                      <Suspense fallback={<Loader />}>
+                        <PrivacyPolicy />
                       </Suspense>
                     )}
                   />

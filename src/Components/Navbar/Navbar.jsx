@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import NavItem from "./NavItem/NavItem";
 import Drawer from "./Darwer/Drawer";
 import logo from "../../assets/images/footer-logo.png";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
   },
   logo: {
     marginBottom: "0.2rem",
+    cursor: "pointer",
   },
 }));
 
@@ -46,8 +48,17 @@ export default function Navbar() {
     <div className={classes.root}>
       <AppBar className={classes.appBar} position="static">
         <Toolbar>
-          <img className={classes.logo} src={logo} style={{width: '2.2rem' , marginRight: '0.5rem'}} alt="" />
-          <Typography className={classes.title}>Productly</Typography>
+          <Link to="/">
+            <img
+              className={classes.logo}
+              src={logo}
+              style={{ width: "2.2rem", marginRight: "0.5rem" }}
+              alt=""
+            />
+          </Link>
+          <Typography className={classes.title}>
+            <Link to="/">Productly</Link>
+          </Typography>
           <div className={classes.navItems}>
             <NavItem path="/" text="Home" />
             <NavItem path="/about" text="About" />

@@ -31,10 +31,10 @@ const useStyles = makeStyles((theme) => ({
   },
   col2: {
     [theme.breakpoints.down("sm")]: {
-      paddingLeft: '2.5rem'
+      paddingLeft: "2.5rem",
     },
     [theme.breakpoints.down("xs")]: {
-      paddingLeft: '0'
+      paddingLeft: "0",
     },
   },
 }));
@@ -82,10 +82,14 @@ const Footer = () => {
                 </Typography>
               </li>
               <li>
-                <Typography className={classes.text}>Privacy Policy</Typography>
+                <Typography className={classes.text}>
+                  <Link to="/privacy-policy">Privacy Policy</Link>
+                </Typography>
               </li>
               <li>
-                <Typography className={classes.text}>Terms of Use</Typography>
+                <Typography className={classes.text}>
+                  <Link to="/terms">Terms of Use</Link>
+                </Typography>
               </li>
             </ul>
           </Grid>
