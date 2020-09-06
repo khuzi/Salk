@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "1rem 0",
     [theme.breakpoints.down("md")]: {
       fontSize: "20px",
-      maxWidth: '40%'
+      maxWidth: "40%",
     },
     [theme.breakpoints.down("xs")]: {
       fontSize: "15px",
@@ -88,6 +88,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       fontSize: "25px",
     },
+    [theme.breakpoints.down("xs")]: {
+      marginTop: "10rem",
+    },
   },
   box: {
     maxWidth: "15rem",
@@ -104,7 +107,15 @@ const Home = () => {
   return (
     <section className="home">
       <Grid container className="showcaseTop">
-        <Grid item xs="12" md="6" container direction="column" justify="center" className="showcase-top-warper">
+        <Grid
+          item
+          xs="12"
+          md="6"
+          container
+          direction="column"
+          justify="center"
+          className="showcase-top-warper"
+        >
           <div className="showcase-top-content">
             <Typography data-aos="fade-up" className={classes.heading1}>
               Because You Matter
