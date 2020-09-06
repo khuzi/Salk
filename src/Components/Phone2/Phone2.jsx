@@ -85,7 +85,7 @@ const Phone2 = (props) => {
         <Grid item xs="5" container justify="flex-start" className="desktopImg">
           <img src={props.screen} alt="" />
         </Grid>
-        <Grid item sm="5">
+        <Grid item sm="5" className="phone-content">
           <Grid item>
             <Typography className={classes.mainHeading}>
               {props.heading}

@@ -59,6 +59,9 @@
     margin-right: 0rem;
     margin: 0 1rem;
   }
+  .Phone1 .phone-content {
+    margin-bottom: 6rem;
+  }
   .Phone1 .desktopImg {
     display: none;
   }

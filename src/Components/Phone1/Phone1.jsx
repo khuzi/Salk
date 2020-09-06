@@ -74,7 +74,7 @@ const Phone2 = (props) => {
   return (
     <section className="Phone1">
       <Grid container justify="space-evenly" alignItems="center">
-        <Grid item sm="5">
+        <Grid item sm="5" className="phone-content">
           <Grid item>
             <Typography className={classes.mainHeading}>
               {props.heading}
