@@ -34,8 +34,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "40px",
     },
     [theme.breakpoints.down("xs")]: {
-      fontSize: "30px",
-      lineHeight: "1",
+      fontSize: "25px",
     },
   },
   heading2: {
@@ -44,6 +43,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "1rem 0",
     [theme.breakpoints.down("md")]: {
       fontSize: "20px",
+      maxWidth: '40%'
     },
     [theme.breakpoints.down("xs")]: {
       fontSize: "15px",
@@ -70,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "12px",
     },
     [theme.breakpoints.down("xs")]: {
-      marginTop: "20px",
+      marginTop: "0px",
     },
     "&:hover": {
       background: theme.palette.primary.main,
@@ -104,18 +104,20 @@ const Home = () => {
   return (
     <section className="home">
       <Grid container className="showcaseTop">
-        <Grid item xs="6" container direction="column" justify="center">
-          <Typography data-aos="fade-up" className={classes.heading1}>
-            Because You Matter
-          </Typography>
-          <Typography data-aos="fade-up" className={classes.heading2}>
-            The best interface to personal health
-          </Typography>
-          <div data-aos="fade-up" className={classes.btnWarper}>
-            <Button className={classes.btn}>Notify me</Button>
+        <Grid item xs="12" md="6" container direction="column" justify="center" className="showcase-top-warper">
+          <div className="showcase-top-content">
+            <Typography data-aos="fade-up" className={classes.heading1}>
+              Because You Matter
+            </Typography>
+            <Typography data-aos="fade-up" className={classes.heading2}>
+              The best interface to personal health
+            </Typography>
+            <div data-aos="fade-up" className={classes.btnWarper}>
+              <Button className={classes.btn}>Notify me</Button>
+            </div>
           </div>
         </Grid>
-        <Grid item xs="6">
+        <Grid item xs="12" md="6">
           <img src={showcaseImg} alt="" />
         </Grid>
       </Grid>

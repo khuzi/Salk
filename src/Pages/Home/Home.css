@@ -39,13 +39,14 @@
   margin-bottom: 100px;
 }
 
-@media (max-width: 500px) {
-  .home .showcaseBottom img {
-    display: block;
-    margin: auto;
-  }
+@media (max-width: 960px) {
   .home .showcaseTop {
-    padding-left: 20px;
+    padding-left: 25px;
+  }
+  .showcase-top-warper {
+    position: absolute;
+    max-width: 95%;
+    top: 8rem;
   }
 }
 
@@ -54,5 +55,13 @@
     height: 200px;
     margin-top: -100px;
     margin-bottom: 100px;
+  }
+  .showcase-top-warper {
+    top: 6rem;
+  }
+}
+@media (max-width: 500px) {
+  .home .showcaseTop {
+    padding-left: 15px;
   }
 }

@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
-import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -42,9 +41,7 @@ export default function TransitionsModal(props) {
         }}
       >
         <Fade in={props.open}>
-          <div className={classes.paper}>
-            <Typography variant="h3">Waitlist design</Typography>
-          </div>
+          <div className={classes.paper}>{props.children}</div>
         </Fade>
       </Modal>
     </div>
