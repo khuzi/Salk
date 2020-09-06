@@ -14,7 +14,7 @@
 
 .Phone1 .desktopImg img {
   width: 70%;
-  margin-left: 4rem;
+  margin-right: 4rem;
   margin-top: 4rem;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .Phone1 .mobileImg img {
-  width: 60%;
+  width: 80%;
 }
 
 .Phone1 ul li {
@@ -67,7 +67,7 @@
   }
   .Phone1 .mobileImg img {
     display: block;
-    margin-left: 3rem;
+    margin-top: 1rem;
   }
   .Phone1 ul li {
     max-width: 100%;

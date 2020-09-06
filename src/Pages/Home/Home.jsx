@@ -254,7 +254,7 @@ const Home = () => {
       </div>
       <br />
       <br />
-      <div data-aos="fade-up">
+      <div data-aos="fade-up" cla>
         <Phone1
           height={window.innerWidth > 500 ? 3000 : 4100}
           heading={

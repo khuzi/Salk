@@ -11,7 +11,6 @@ const useStyles = makeStyles((theme) => ({
   },
   icon: {
     marginRight: "1rem",
-    marginTop: '1rem',
     borderRadius: 14,
     width: 35,
     height: 35,
