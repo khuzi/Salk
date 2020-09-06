@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 import { Grid, Typography, makeStyles } from "@material-ui/core";
-import phoneImg from "../../assets/images/iphone.png";
 import CheckBox from "../UI/CheckBox/CheckBox";
 import "./Phone1.css";
 
@@ -82,7 +81,7 @@ const Phone2 = (props) => {
             </Typography>
           </Grid>
           <Grid item xs="12" container justify="center" className="mobileImg">
-            <img src={phoneImg} alt="" />
+            <img src={props.screen} alt="" />
           </Grid>
           <Grid item>
             <Typography className="subHeading">{props.title1}</Typography>
@@ -117,7 +116,7 @@ const Phone2 = (props) => {
           </Grid>
         </Grid>
         <Grid item xs="5" container justify="flex-end" className="desktopImg">
-          <img src={phoneImg} alt="" />
+          <img src={props.screen} alt="" />
         </Grid>
       </Grid>
     </section>

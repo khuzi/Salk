@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import { Grid, Typography, makeStyles } from "@material-ui/core";
-import phoneImg from "../../assets/images/iphone.png";
+
 import CheckBox from "../UI/CheckBox/CheckBox";
 import "./Phone2.css";
 
@@ -10,10 +10,10 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "36px",
     color: theme.palette.heading.hd2,
     fontWeight: "bold",
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '25px',
-      marginLeft: '1rem'
-    }
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "25px",
+      marginLeft: "1rem",
+    },
   },
   subHeading: {
     fontSize: "18px",
@@ -83,7 +83,7 @@ const Phone2 = (props) => {
     <section className="Phone2">
       <Grid container justify="space-evenly" alignItems="center">
         <Grid item xs="5" container justify="flex-start" className="desktopImg">
-          <img src={phoneImg} alt="" />
+          <img src={props.screen} alt="" />
         </Grid>
         <Grid item sm="5">
           <Grid item>
@@ -92,7 +92,7 @@ const Phone2 = (props) => {
             </Typography>
           </Grid>
           <Grid item xs="12" container justify="center" className="mobileImg">
-            <img src={phoneImg} alt="" />
+            <img src={props.screen} alt="" />
           </Grid>
           <Grid item>
             <Typography className="subHeading">{props.title1}</Typography>

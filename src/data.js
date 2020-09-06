@@ -1,3 +1,8 @@
+import scr1 from "./assets/images/Screen-1.png";
+import scr2 from "./assets/images/Screen-2.png";
+import scr4 from "./assets/images/Screen-4.png";
+import scr5 from "./assets/images/Screen-5.png";
+
 export const phone1 = {
   heading: "Understand your health better",
   title1: "Quick and easy",
@@ -8,6 +13,7 @@ export const phone1 = {
   title3: "Actionable data and insights",
   text3:
     "Reliability and accuracy in the comfort of your own home. Results that come with necessary feedback on maintaining or improving overall health.",
+  screen: scr1,
 };
 
 export const phone2 = {
@@ -20,6 +26,7 @@ export const phone2 = {
   title3: "Solution based approach",
   text3:
     "A better understanding of your health that is supported by peer-reviewed speciates",
+  screen: scr2,
 };
 
 export const phone3 = {
@@ -30,6 +37,7 @@ export const phone3 = {
   text2: "Have the option to delete or save notes",
   title3: "View monthly appointments",
   text3: "Keep track of all your upcoming consultations and billing",
+  screen: scr4,
 };
 
 export const phone4 = {
@@ -43,4 +51,5 @@ export const phone4 = {
   title3: "Get medical treatment for non-emergency conditions",
   text3:
     "Requesting a consultation on Salk is easy. Once you describe your symptoms and brief description a specialist will be available",
+  screen: scr5,
 };

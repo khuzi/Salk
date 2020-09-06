@@ -5,6 +5,9 @@ import {
   phone3 as phone3Data,
   phone4 as phone4Data,
 } from "../../data";
+
+import scr3 from "../../assets/images/Screen-3.png";
+
 import { Grid, Typography, Button, makeStyles } from "@material-ui/core";
 import showcaseImg from "../../assets/images/Top1.png";
 import improveImg from "../../assets/images/Improve.png";
@@ -265,13 +268,14 @@ const Home = () => {
           text1="Offering catered diet plans specific to your needs."
           title2="Personalized plans built by licensed dietitians"
           text2="Access your diet plan wherever you are at no cost"
+          screen={scr3}
         />
       </div>
       <br />
       <br />
       <div data-aos="fade-up">
         <Phone2
-          height={window.innerWidth > 500 ? 4000 : 4900}
+          height={window.innerWidth > 500 ? 3800 : 4900}
           {...phone3Data}
         />
       </div>

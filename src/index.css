@@ -29,7 +29,7 @@ a {
 }
 
 body::-webkit-scrollbar {
-  width: 0.8rem;
+  width: 0.45rem;
 }
 
 body::-webkit-scrollbar-track {

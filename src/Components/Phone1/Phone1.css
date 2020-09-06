@@ -33,16 +33,21 @@
   margin-top: 2rem;
 }
 
-@media (max-width: 935px) {
+@media (max-width: 1024px) {
   .Phone1 .desktopImg img {
     width: 80%;
   }
 }
 
-@media (max-width: 735px) {
+@media (max-width: 935px) {
   .Phone1 .desktopImg img {
-    width: 110%;
-    margin: 0;
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .Phone1 .desktopImg img {
+    width: 105%;
   }
   .Phone1 ul li {
     max-width: 100%;
@@ -62,7 +67,7 @@
   }
   .Phone1 .mobileImg img {
     display: block;
-    margin: auto;
+    margin-left: 3rem;
   }
   .Phone1 ul li {
     max-width: 100%;

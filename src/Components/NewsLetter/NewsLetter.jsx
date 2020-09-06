@@ -4,7 +4,7 @@ import { Grid, Button } from "@material-ui/core";
 
 import "./NewsLetter.css";
 
-const NewsLetter = () => {
+const NewsLetter = (props) => {
   return (
     <div className="news-letter">
       <Grid container alignItems="center" justify="center">
@@ -19,7 +19,9 @@ const NewsLetter = () => {
               <input type="email" placeholder="Your Email Address" required />
             </Grid>
             <Grid item md="3">
-              <Button className="btn">Join Salk</Button>
+              <Button className="btn" onClick={props.clicked}>
+                Join Salk
+              </Button>
             </Grid>
           </Grid>
         </Grid>
