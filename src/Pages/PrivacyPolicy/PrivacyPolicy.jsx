@@ -63,4 +63,4 @@ const PrivacyPolicy = () => {
   );
 };
 
-export default PrivacyPolicy;
+export default React.memo(PrivacyPolicy);

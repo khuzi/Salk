@@ -29,17 +29,16 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
     [theme.breakpoints.down("xs")]: {
       display: "block",
-
     },
   },
   logo: {
     display: "flex",
     alignItems: "center",
-    justifyContent: 'center',
+    justifyContent: "center",
   },
 }));
 
-export default function TemporaryDrawer() {
+export default React.memo(function TemporaryDrawer() {
   const classes = useStyles();
   const [state, setState] = React.useState({
     left: false,
@@ -64,7 +63,11 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(false)}
     >
       <div className={classes.logo}>
-        <img src={logo} alt="" style={{width: '2.5rem' , marginRight: '0.5rem'}}/>
+        <img
+          src={logo}
+          alt=""
+          style={{ width: "2.5rem", marginRight: "0.5rem" }}
+        />
         <Typography className={classes.title} align="center">
           Productly
         </Typography>
@@ -95,4 +98,4 @@ export default function TemporaryDrawer() {
       </React.Fragment>
     </div>
   );
-}
+});

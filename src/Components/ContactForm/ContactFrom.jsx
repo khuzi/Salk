@@ -14,7 +14,7 @@ const ContactFrom = () => {
   return (
     <div className="contact-form">
       <Grid container justify="space-between">
-        <Grid item xs="12" md="5" style={{marginTop: '2rem'}}>
+        <Grid item xs="12" md="5" style={{ marginTop: "2rem" }}>
           <div className="form-title">
             <i className="fa fa-comments"></i>
             <Typography
@@ -46,7 +46,7 @@ const ContactFrom = () => {
             </div>
           </form>
         </Grid>
-        <Grid item xs="12" md="6" style={{marginTop: '2rem'}}>
+        <Grid item xs="12" md="6" style={{ marginTop: "2rem" }}>
           <Typography
             variant="h6"
             style={{ fontWeight: "bold", color: "#2F281E" }}
@@ -114,4 +114,4 @@ const ContactFrom = () => {
   );
 };
 
-export default ContactFrom;
+export default React.memo(ContactFrom);

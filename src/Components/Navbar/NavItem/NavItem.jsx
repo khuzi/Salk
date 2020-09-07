@@ -8,8 +8,8 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "14px",
     padding: "0 1rem",
     textTransform: "capitalize",
-    textAlign: 'center',
-    width: '100%',
+    textAlign: "center",
+    width: "100%",
   },
 }));
 
@@ -22,4 +22,4 @@ const NavItem = (props) => {
   );
 };
 
-export default NavItem;
+export default React.memo(NavItem);

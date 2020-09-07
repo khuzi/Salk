@@ -254,7 +254,9 @@ const Home = () => {
       <div data-aos="fade-up">
         <Phone1
           height={window.innerWidth > 500 ? 1000 : 2100}
-          {...phone1Data}
+          phoneContent={{ ...phone1Data }}
+          screen={phone1Data.screen}
+          heading={phone1Data.heading}
         />
       </div>
       <br />
@@ -262,34 +264,39 @@ const Home = () => {
       <div data-aos="fade-up">
         <Phone2
           height={window.innerWidth > 500 ? 2200 : 3100}
-          {...phone2Data}
-        />
-      </div>
-      <br />
-      <br />
-      <div data-aos="fade-up" cla>
-        <Phone1
-          height={window.innerWidth > 500 ? 3000 : 4100}
-          heading={
-            <p style={{ lineHeight: "1.3" }}>
-              Understand your diet better.
-              <br />
-              Explore different plans.
-            </p>
-          }
-          title1="Diet plans that fit your goal"
-          text1="Offering catered diet plans specific to your needs."
-          title2="Personalized plans built by licensed dietitians"
-          text2="Access your diet plan wherever you are at no cost"
-          screen={scr3}
+          phoneContent={{ ...phone2Data }}
+          screen={phone2Data.screen}
+          heading={phone2Data.heading}
         />
       </div>
       <br />
       <br />
       <div data-aos="fade-up">
+        <Phone1
+          height={window.innerWidth > 500 ? 3000 : 4100}
+          heading={
+            <p style={{ marginBottom: "2rem" }}>
+              Understand your diet better. Explore different plans.
+            </p>
+          }
+          phoneContent={{
+            title1: "Diet plans that fit your goal",
+            text1: "Offering catered diet plans specific to your needs.",
+            title2: "Personalized plans built by licensed dietitians",
+            text2: "Access your diet plan wherever you are at no cost",
+          }}
+          screen={scr3}
+        />
+      </div>
+
+      <br />
+      <br />
+      <div data-aos="fade-up">
         <Phone2
           height={window.innerWidth > 500 ? 3800 : 4900}
-          {...phone3Data}
+          phoneContent={{ ...phone3Data }}
+          screen={phone3Data.screen}
+          heading={phone3Data.heading}
         />
       </div>
       <br />
@@ -297,7 +304,9 @@ const Home = () => {
       <div data-aos="fade-up">
         <Phone1
           height={window.innerWidth > 500 ? 4600 : 5900}
-          {...phone4Data}
+          phoneContent={{ ...phone4Data }}
+          screen={phone4Data.screen}
+          heading={phone4Data.heading}
         />
       </div>
       <br />
@@ -306,4 +315,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default React.memo(Home);

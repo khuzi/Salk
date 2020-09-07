@@ -2,16 +2,6 @@
   margin-right: 4rem;
 }
 
-.Phone2 .subHeading {
-  font-size: 18px;
-  color: #2f281e;
-  font-weight: bold;
-  margin-top: 1rem;
-  margin-left: 4.2rem;
-  margin-bottom: -1.5rem;
-  max-width: 100%;
-}
-
 .Phone2 .desktopImg img {
   width: 70%;
   margin-left: 4rem;
@@ -21,39 +11,25 @@
 .Phone2 .mobileImg {
   display: none;
 }
-
 .Phone2 .mobileImg img {
   width: 80%;
-}
-
-.Phone2 ul li {
-  display: flex;
-  align-items: center;
-  max-width: 100%;
-  margin-top: 2rem;
 }
 
 @media (max-width: 1024px) {
   .Phone2 .desktopImg img {
     width: 80%;
-    margin-left: -1rem;
   }
 }
 
 @media (max-width: 935px) {
   .Phone2 .desktopImg img {
     width: 95%;
-    margin-left: -2rem;
   }
 }
 
 @media (max-width: 768px) {
   .Phone2 .desktopImg img {
     width: 105%;
-    margin-left: -3rem;
-  }
-  .Phone2 ul li {
-    max-width: 100%;
   }
 }
 
@@ -71,26 +47,13 @@
   .Phone2 .mobileImg {
     display: block;
   }
+
   .Phone2 .mobileImg img {
     display: block;
     margin-top: 1rem;
   }
-  .Phone2 ul li {
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
   .Phone2 .subHeading {
     margin-bottom: -2.5rem;
     display: block;
-  }
-  .Phone2 ul li .liText {
-    max-width: 80%;
-  }
-}
-
-@media (max-width: 513px) {
-  .Phone2 ul li .liText {
-    padding-top: 1.5rem;
   }
 }

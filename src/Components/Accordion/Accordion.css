@@ -1,0 +1,17 @@
+.Accordion .subHeading {
+  font-size: 18px;
+  color: #2f281e;
+  font-weight: bold;
+  margin-left: 4.2rem;
+}
+
+@media (max-width: 600px) {
+  .Accordion .subHeading {
+    padding-bottom: 2rem;
+  }
+}
+
+.Accordion .listItem {
+  display: flex;
+  align-items: center;
+}

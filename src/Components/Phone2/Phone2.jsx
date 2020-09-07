@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-
 import { Grid, Typography, makeStyles } from "@material-ui/core";
-
-import CheckBox from "../UI/CheckBox/CheckBox";
+import Accordian from "../Accordion/Accordian";
+import CustomSlider from "../CustomSlider/CustomSlider";
 import "./Phone2.css";
 
 const useStyles = makeStyles((theme) => ({
   mainHeading: {
     fontSize: "36px",
+    marginBottom: "1rem",
     color: theme.palette.heading.hd2,
     fontWeight: "bold",
     [theme.breakpoints.down("sm")]: {
@@ -81,52 +81,31 @@ const Phone2 = (props) => {
 
   return (
     <section className="Phone2">
-      <Grid container justify="space-evenly" alignItems="center">
-        <Grid item xs="5" container justify="flex-start" className="desktopImg">
-          <img src={props.screen} alt="" />
-        </Grid>
-        <Grid item sm="5" className="phone-content">
-          <Grid item>
-            <Typography className={classes.mainHeading}>
-              {props.heading}
-            </Typography>
-          </Grid>
-          <Grid item xs="12" container justify="center" className="mobileImg">
+      {window.innerWidth <= 600 && (
+        <>
+          <Grid xs="12" container justify="center" className="mobileImg">
             <img src={props.screen} alt="" />
           </Grid>
-          <Grid item>
-            <Typography className="subHeading">{props.title1}</Typography>
-            <ul>
-              <li>
-                <CheckBox checked={t1} />
-                <Typography className="liText" style={{ color: "#544837" }}>
-                  {props.text1}
-                </Typography>
-              </li>
-            </ul>
-            <Typography className="subHeading">{props.title2}</Typography>
-            <ul>
-              <li>
-                <CheckBox checked={t2} />
-                <Typography className="liText" style={{ color: "#544837" }}>
-                  {props.text2}
-                </Typography>
-              </li>
-            </ul>
-            <Typography className="subHeading">{props.title3}</Typography>
-            <ul>
-              <li>
-                <CheckBox checked={t3} />
-                <Typography className="liText" style={{ color: "#544837" }}>
-                  {props.text3}
-                </Typography>
-              </li>
-            </ul>
+          <CustomSlider {...props.phoneContent} />
+        </>
+      )}
+      {window.innerWidth > 600 && (
+        <Grid container justify="space-evenly" alignItems="center">
+          <Grid item xs="5" container justify="flex-end" className="desktopImg">
+            <img src={props.screen} alt="" />
+          </Grid>
+          <Grid item sm="5" className="phone-content">
+            <Grid item>
+              <Typography className={classes.mainHeading}>
+                {props.heading}
+              </Typography>
+            </Grid>
+            <Accordian {...props.phoneContent} t1={t1} t2={t2} t3={t3} />
           </Grid>
         </Grid>
-      </Grid>
+      )}
     </section>
   );
 };
 
-export default Phone2;
+export default React.memo(Phone2);
