@@ -8,12 +8,13 @@ import "./Phone1.css";
 const useStyles = makeStyles((theme) => ({
   mainHeading: {
     fontSize: "36px",
-    color: theme.palette.heading.hd2,
-    fontWeight: "bold",
+    color: "#6b6b6b;",
+    fontWeight: "500",
+    marginLeft: "5rem",
+    lineHeight: "1.2",
     marginBottom: "1rem",
     [theme.breakpoints.down("sm")]: {
       fontSize: "25px",
-      marginLeft: "1rem",
     },
   },
   text: {
@@ -81,22 +82,21 @@ const Phone2 = (props) => {
             <img src={props.screen} alt="" />
           </Grid>
           <CustomSlider {...props.phoneContent} />
-          
         </>
       )}
       {window.innerWidth > 600 && (
-        <Grid container justify="space-evenly" alignItems="center">
-          <Grid item sm="5" className="phone-content">
+        <Grid container justify="flex-start" alignItems="center">
+          <Grid item xs="5" md="4"  className="phone-content">
             <Typography className={classes.mainHeading}>
               {props.heading}
             </Typography>
-            <Accordian {...props.phoneContent} t1={t1} t2={t2} t3={t3}/>
+            <Accordian {...props.phoneContent} t1={t1} t2={t2} t3={t3} />
           </Grid>
           <Grid
             item
             xs="5"
             container
-            justify="flex-start"
+            justify="flex-end"
             className="desktopImg"
           >
             <img src={props.screen} alt="" />

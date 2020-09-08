@@ -62,7 +62,14 @@ export default React.memo(function CustomizedAccordions(props) {
         <AccordionDetails>
           <div className="listItem">
             <CheckBox checked={props.t1} />
-            <Typography className="liText" style={{ color: "#544837" }}>
+            <Typography
+              className="liText"
+              style={{
+                color: "#6b6b6b",
+                fontSize: "14px",
+                fontFamily: "Airbnb Light",
+              }}
+            >
               {props.text1}
             </Typography>
           </div>
@@ -79,7 +86,14 @@ export default React.memo(function CustomizedAccordions(props) {
         <AccordionDetails>
           <div className="listItem">
             <CheckBox checked={props.t2} />
-            <Typography className="liText" style={{ color: "#544837" }}>
+            <Typography
+              className="liText"
+              style={{
+                color: "#6b6b6b",
+                fontSize: "14px",
+                fontFamily: "Airbnb Light",
+              }}
+            >
               {props.text2}
             </Typography>
           </div>
@@ -98,7 +112,14 @@ export default React.memo(function CustomizedAccordions(props) {
           <AccordionDetails>
             <div className="listItem">
               <CheckBox checked={props.t3} />
-              <Typography className="liText" style={{ color: "#544837" }}>
+              <Typography
+                className="liText"
+                style={{
+                  color: "#6b6b6b",
+                  fontSize: "14px",
+                  fontFamily: "Airbnb Light",
+                }}
+              >
                 {props.text3}
               </Typography>
             </div>

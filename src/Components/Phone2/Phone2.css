@@ -1,24 +1,15 @@
-.Phone2 {
-  margin-right: 4rem;
-}
-
 .Phone2 .desktopImg img {
-  width: 70%;
-  margin-left: 4rem;
+  width: 80%;
   margin-top: 4rem;
+  margin-left: -2rem;
 }
 
-.Phone2 .mobileImg {
-  display: none;
+.Phone2 .phone-content {
+  margin-left: 2rem;
 }
+
 .Phone2 .mobileImg img {
   width: 80%;
-}
-
-@media (max-width: 1024px) {
-  .Phone2 .desktopImg img {
-    width: 80%;
-  }
 }
 
 @media (max-width: 935px) {
@@ -30,12 +21,12 @@
 @media (max-width: 768px) {
   .Phone2 .desktopImg img {
     width: 105%;
+    margin-left: -2rem;
   }
 }
 
 @media (max-width: 600px) {
   .Phone2 {
-    margin-right: 0rem;
     margin: 0 1rem;
   }
   .Phone2 .phone-content {
