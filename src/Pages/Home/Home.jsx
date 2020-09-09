@@ -262,7 +262,7 @@ const Home = () => {
       <br />
       <br />
       <div data-aos="fade-up">
-        <Phone2
+        <Phone1
           height={window.innerWidth > 500 ? 2200 : 3100}
           phoneContent={{ ...phone2Data }}
           screen={phone2Data.screen}
@@ -292,7 +292,7 @@ const Home = () => {
       <br />
       <br />
       <div data-aos="fade-up">
-        <Phone2
+        <Phone1
           height={window.innerWidth > 500 ? 3800 : 4900}
           phoneContent={{ ...phone3Data }}
           screen={phone3Data.screen}

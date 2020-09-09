@@ -1,8 +1,18 @@
+.Accordion {
+  max-width: 400px;
+}
+
 .Accordion .subHeading {
   font-size: 18px;
   color: rgb(107, 107, 107);
   font-weight: bold;
   margin-left: 4.2rem;
+}
+
+@media(max-width: 960px) {
+  .Accordion .subHeading { 
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 600px) {

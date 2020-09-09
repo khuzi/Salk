@@ -1,31 +1,13 @@
 import React, { useState, useEffect } from "react";
 
-import { Grid, makeStyles, Typography } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import Accordian from "../Accordion/Accordian";
 import CustomSlider from "../CustomSlider/CustomSlider";
 import "./Phone1.css";
 
-const useStyles = makeStyles((theme) => ({
-  mainHeading: {
-    fontSize: "36px",
-    color: "#6b6b6b;",
-    fontWeight: "500",
-    marginLeft: "5rem",
-    lineHeight: "1.2",
-    marginBottom: "1rem",
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "25px",
-    },
-  },
-  text: {
-    color: "#544837",
-    marginTop: "2rem",
-  },
-}));
+
 
 const Phone2 = (props) => {
-  const classes = useStyles();
-
   const [height, setHeight] = useState(0);
   const [t1, setT1] = useState(false);
   const [t2, setT2] = useState(false);
@@ -85,18 +67,20 @@ const Phone2 = (props) => {
         </>
       )}
       {window.innerWidth > 600 && (
-        <Grid container justify="flex-start" alignItems="center">
-          <Grid item xs="5" md="4"  className="phone-content">
-            <Typography className={classes.mainHeading}>
-              {props.heading}
-            </Typography>
-            <Accordian {...props.phoneContent} t1={t1} t2={t2} t3={t3} />
+        <Grid
+          container
+          justify="center"
+          alignItems="center"
+          className="main-warper"
+        >
+          <Grid item xs="5" container justify="flex-end" className="phone-content">
+            <Accordian {...props} {...props.phoneContent} t1={t1} t2={t2} t3={t3} />
           </Grid>
           <Grid
             item
-            xs="5"
+            xs="7"
             container
-            justify="flex-end"
+            justify="flex-start"
             className="desktopImg"
           >
             <img src={props.screen} alt="" />

@@ -1,8 +1,7 @@
 .Phone1 .desktopImg img {
-  width: 80%;
+  width: 450px;
   margin-top: 4rem;
 }
-
 .Phone1 .mobileImg {
   display: none;
 }
@@ -11,17 +10,13 @@
   width: 80%;
 }
 
-@media (max-width: 935px) {
+
+@media (max-width: 910px) {
   .Phone1 .desktopImg img {
-    width: 95%;
+    width: 80%;
   }
 }
 
-@media (max-width: 768px) {
-  .Phone1 .desktopImg img {
-    width: 105%;
-  }
-}
 
 @media (max-width: 600px) {
   .Phone1 {

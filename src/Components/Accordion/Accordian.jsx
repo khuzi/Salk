@@ -1,5 +1,5 @@
 import React from "react";
-import { withStyles } from "@material-ui/core/styles";
+import { withStyles, makeStyles } from "@material-ui/core/styles";
 import MuiAccordion from "@material-ui/core/Accordion";
 import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
 import MuiAccordionDetails from "@material-ui/core/AccordionDetails";
@@ -36,6 +36,20 @@ const AccordionSummary = withStyles({
   expanded: {},
 })(MuiAccordionSummary);
 
+const useStyles = makeStyles((theme) => ({
+  mainHeading: {
+    fontSize: "36px",
+    color: "#6b6b6b;",
+    fontWeight: "500",
+    lineHeight: "1.2",
+    marginBottom: "1rem",
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '25px',
+      fontWeight: "bold",
+    }
+  },
+}));
+
 const AccordionDetails = withStyles((theme) => ({
   root: {
     padding: theme.spacing(2),
@@ -43,6 +57,7 @@ const AccordionDetails = withStyles((theme) => ({
 }))(MuiAccordionDetails);
 
 export default React.memo(function CustomizedAccordions(props) {
+  const classes = useStyles();
   const [expanded, setExpanded] = React.useState("panel1");
 
   const handleChange = (panel) => (event, newExpanded) => {
@@ -56,6 +71,11 @@ export default React.memo(function CustomizedAccordions(props) {
         expanded={expanded === "panel1"}
         onChange={handleChange("panel1")}
       >
+        <div style={{ marginLeft: "5.3rem" }}>
+          <Typography className={classes.mainHeading}>
+            {props.heading}
+          </Typography>
+        </div>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
           <Typography className="subHeading">{props.title1}</Typography>
         </AccordionSummary>
