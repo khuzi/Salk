@@ -66,7 +66,7 @@ export default React.memo(function CustomizedAccordions(props) {
 
   return (
     <div className="Accordion">
-      <div style={{ marginLeft: "5.3rem" }}>
+      <div style={{ marginLeft: "5.3rem" , width: '80%'}}>
         <Typography className={classes.mainHeading}>{props.heading}</Typography>
       </div>
       <Accordion

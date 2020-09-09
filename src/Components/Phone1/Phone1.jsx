@@ -73,7 +73,8 @@ const Phone2 = (props) => {
         >
           <Grid
             item
-            xs="5"
+            xs="6"
+            sm="5"
             container
             justify="flex-end"
             className="phone-content"
@@ -88,7 +89,8 @@ const Phone2 = (props) => {
           </Grid>
           <Grid
             item
-            xs="7"
+            xs="6"
+            sm="7"
             container
             justify="flex-start"
             className="desktopImg"

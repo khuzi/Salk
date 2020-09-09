@@ -16,7 +16,6 @@ import discoverImg from "../../assets/images/Discover.png";
 import monitorImg from "../../assets/images/Monitor.png";
 import curveImg from "../../assets/images/curveBG.png";
 import Phone1 from "../../Components/Phone1/Phone1";
-import Phone2 from "../../Components/Phone2/Phone2";
 import "./Home.css";
 
 const useStyles = makeStyles((theme) => ({
