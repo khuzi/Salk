@@ -5,8 +5,6 @@ import Accordian from "../Accordion/Accordian";
 import CustomSlider from "../CustomSlider/CustomSlider";
 import "./Phone1.css";
 
-
-
 const Phone2 = (props) => {
   const [height, setHeight] = useState(0);
   const [t1, setT1] = useState(false);
@@ -73,8 +71,20 @@ const Phone2 = (props) => {
           alignItems="center"
           className="main-warper"
         >
-          <Grid item xs="5" container justify="flex-end" className="phone-content">
-            <Accordian {...props} {...props.phoneContent} t1={t1} t2={t2} t3={t3} />
+          <Grid
+            item
+            xs="5"
+            container
+            justify="flex-end"
+            className="phone-content"
+          >
+            <Accordian
+              {...props}
+              {...props.phoneContent}
+              t1={t1}
+              t2={t2}
+              t3={t3}
+            />
           </Grid>
           <Grid
             item

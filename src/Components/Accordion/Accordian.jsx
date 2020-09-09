@@ -43,10 +43,10 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "500",
     lineHeight: "1.2",
     marginBottom: "1rem",
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '25px',
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "25px",
       fontWeight: "bold",
-    }
+    },
   },
 }));
 
@@ -66,16 +66,14 @@ export default React.memo(function CustomizedAccordions(props) {
 
   return (
     <div className="Accordion">
+      <div style={{ marginLeft: "5.3rem" }}>
+        <Typography className={classes.mainHeading}>{props.heading}</Typography>
+      </div>
       <Accordion
         square
         expanded={expanded === "panel1"}
         onChange={handleChange("panel1")}
       >
-        <div style={{ marginLeft: "5.3rem" }}>
-          <Typography className={classes.mainHeading}>
-            {props.heading}
-          </Typography>
-        </div>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
           <Typography className="subHeading">{props.title1}</Typography>
         </AccordionSummary>
